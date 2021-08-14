@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Deepify.in</title>
+	<style>
+		body {
+			padding-bottom: 0em;
+			background: #111;
+			color: white;
+		}
+
+		*{
+			margin: 0;
+		}
+
+		.flex-container {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.container {
+			margin-left: 0px;
+			margin-right: 150px;
+			
+		}
+
+		.logo {
+			/*float: left;*/
+			padding: 10px 0 0 70px;
+		}
+
+		nav {
+			/*float: right;*/
+			margin: 0;
+			
+		}
+
+		nav > ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			 
+		}
+
+		nav > ul > li {
+			display: inline-block;
+			margin-left: 70px;
+			position: relative;
+			padding-bottom: 12px;
+		}
+
+		nav > ul > li > a {
+			font-size: 16px;
+			line-height: 1.0;
+			text-decoration: none;
+			text-transform: uppercase;
+			color: #000;
+			letter-spacing: 2.25px;
+			font-weight: 500;
+		}
+
+		nav a:hover {
+			
+			font-size: 17px;
+			text-shadow: 2px 3px rgba(247, 196, 196, 0.315);
+		}
+
+		nav a::before {
+			content: '';
+			display: block;
+			height: 5px;
+			width: 0%;
+			background-color: #000;
+			position: absolute;
+			top: -75px;
+		}
+
+		nav a:hover::before {
+			width: 100%;
+			transition: all ease-in-out 400ms;
+		}
+
+		header {
+			background-color: rgb(90, 90, 90);
+		}
+
+		
+
+		header::after {
+			content: '';
+			display: table;
+			clear: both
+		}
+
+		.logo-design {
+			display: flex;
+			padding-top: 50vh;
+			padding-bottom: 40vh;
+			margin: 0;
+			
+			background: no-repeat center/100% url('https://i.pinimg.com/564x/18/67/71/186771f9f5092579a9e99885dd4c25de.jpg');
+			justify-content: center;
+			color:#000;
+			font-family: 'Fira Code', monospace;
+			font-weight: 200;
+			font-size: 150px;
+			line-height: 2;
+			letter-spacing: 5px;
+			text-shadow: 3px 6px rgba(68, 68, 68, 0.514);
+		}
+
+		.flipH {
+			display: inline-block;
+			transform: scale(-1, -1);
+		}
+
+		.flipH:hover {
+			transition: all 0.75s ease-in;
+			transform: scale(1, 1);
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/****
+		.circle-design-outter {
+			width: 80%;
+			margin: 0 auto;
+			/*border: 2px solid white;
+			border-radius: 50%;
+			padding: 0;
+			background: url('circle-image.jpg') no-repeat left;
+			background-size: 55%;
+			padding: 300px 20px 300px 0;
+			overflow: hidden;
+			background-color: #000;
+
+		}
+
+		.circle-design-inner {
+			float: right;
+			line-height: 1.5;
+			text-align: justify;
+			width: 55%;
+			color: white;
+			font-size: 22px;
+			font-family: 'Sans Open',sans-serif;
+		}
+
+		.quote-style {
+			line-height: 1.20;
+			font-size: 28px;
+		}
+
+*/
+
+
+
+		.circle-container-outter {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 80%;
+			margin: 0 auto;
+			border: 10px solid hsla(0, 0%, 59%, 0.048);
+			border-radius: 50%;
+			background-color: black;
+		}
+
+		.circle-container-inner {
+			margin: 0;
+			padding: 220px;
+		}
+
+		.quotes-container {
+			line-height: 1.5;
+			font-size: 28px;
+			font-family:' Fira Code', monospace;
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		.semi-circle-outter {
+			width: 80%;
+			margin: 0 auto;
+			/*border: 2px solid white;*/
+			border-radius: 65px;
+			box-shadow: 12px 16px rgba(68, 68, 68, 0.514);
+			background: url('https://i.pinimg.com/564x/9f/ce/0c/9fce0cb75da10b58866bcbaf419ec6e8.jpg') no-repeat right;
+			padding: 0;
+			background-size: 45%;
+			padding: 70px 0px 70px 100px;
+			overflow: hidden;
+			background-color: #000;
+			color: #f1f1f1;
+		}
+
+		.semi-circle-inner {
+			float: left;
+			width: 45%;
+			font-family: 'Fira Code',monospace;
+			text-align: justify;
+			
+
+		}
+
+		.ignite-song0 {
+			line-height: 1.65;
+			font-size: 24px;
+			font-weight: 400;
+		}
+
+		.ignite-song1 {
+			line-height: 1.65;
+			font-size: 24px;
+			font-weight: 400;
+		}
+
+		.ignite-song2 {
+			line-height: 1.65;
+			font-size: 24px;
+			font-weight: 400;
+		}
+
+		.ignite-song3 {
+			font-size: 30px;
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		.grid-container-left-align {
+			margin: 5px;
+			background: black;
+			color: white;
+		}
+
+
+		.grid-item-left-align {
+			padding: 250px;
+			border: 2px solid white;
+
+			
+		}
+
+		.grid-container-right-align {
+			margin: 5px;
+			background: black;
+			color: white;
+		}
+
+		.grid-item-right-align {
+			padding: 250px 10px 250px 40em;
+			text-align: justify;
+			/*border: 2px solid white;*/
+			font-size: 30px;
+			line-height: 1.5;
+
+		}
+
+		.grid-container-gift-card {
+			display: grid;
+			grid-template-columns: auto auto;
+			/*grid-auto-columns: 100px;
+			grid-auto-rows: 200px;*/
+			column-gap: 15px;
+			/*border: 2px solid white;*/
+			padding: 50px 700px;
+			margin: 5px;
+		}
+
+		.grid-item-gift-card {
+			border: 2px solid white;
+			text-align: center;
+			padding: 100px 0px;
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		footer {
+			width: 100%;
+			margin: 100px auto;
+			background-color: #000;
+			margin-bottom: -7px;
+		}
+
+		.footer-container-outter {
+			padding-top: 1px;
+			background-color: #000;
+		}
+
+		.footer-bottom {
+			display: flex;
+			justify-content: center;
+			
+			background-color: darkgrey;
+			color:#000;
+		}
+
+		#my-footer-bottom {
+			text-transform: capitalize;
+			word-spacing: 2px;
+			font-weight: 500;
+			font-family:  'Fira Code', monospace;
+			font-size: 20px;
+			padding-top: 4px;
+			padding-bottom: 4px;
+		}
+
+		#my-h3 {
+			font-family: 'Sans Open',sans-serif;
+			font-weight: 400;
+			margin-top: 25px;
+			text-align: center;
+			margin-bottom: 40px;
+			font-size: 32px;
+			line-height: 1.75;
+			letter-spacing: 4px;
+		}
+
+		#my-p {
+			display: flex;
+			justify-content: center;
+			line-height: 1.25;
+			font-size: 20px;
+			font-family: 'Fira Code',monospace;
+			min-width: 400px;
+			margin: 0 100px;
+			word-spacing: 1px;
+			letter-spacing: 1px;
+		}
+
+		#my-ul {
+			list-style-type: none;
+			margin-right: 0px;
+			display: flex;
+			justify-content: center;
+			margin: 65px 40px 35px 0; 
+		}
+
+		#creator-name {
+			padding-left: 10px;
+			font-family: 'Fira Code', monospace;
+			font-size: 20px;
+		}
+
+		#my-a {
+			margin: 0 40px 0 0;
+			text-decoration: none;
+			color: #f1f1f1;
+			font-size: 24px;
+		}
+
+		#my-a:hover {
+			transition: color .4s ease;
+			color: aqua;
+		}
+
+
+
+
+
+
+
+
+
+
+
+		.expe {
+			width: 80%;
+			margin: 0 auto;
+		}
+
+		.gift-section {
+			width: 80%;
+			margin: 0 auto;
+			font-family: 'Open Sans',sans-serif;
+			padding: 0;
+			background: url('gift-card-image.jpg') no-repeat left;
+			background-size: 55%;
+			overflow: hidden;
+			padding: 200px 0;
+			background-color: #f1f1f1;
+			color: red;
+		}
+
+		
+
+
+
+		
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		.grid-item-about {
+			border: 2px solid white;
+		}
+
+		.flex-container-center {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			/*border: 2px solid white;*/
+			margin: 5px;
+			padding: 10em 40em 10em 40em;
+			line-height: 1.6;
+			background: black;
+			color: white;
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+		.mixed-design-outter {
+			width: 80%;
+			margin: 0 auto;
+			/*border: 2px solid white;10*/
+			border-radius: 65px;
+			box-shadow: 5px 10px #c7c6c6d8;
+			padding: 0;
+			background: url('https://i.pinimg.com/564x/d5/08/e8/d508e8222f1c819be3b43ea29eabac8c.jpg') no-repeat center;
+			background-size: 30%;
+			overflow: hidden;
+			padding: 50px 0px 50px 0px;
+			background-color: #f1f1f1;
+			color: #111;
+		}
+
+		.mixed-design-inner0 {
+			padding-top: 35px;
+			width: 31%;
+			float: left;
+		}
+
+		.mixed-design-inner1 {
+			padding-top: 35px;
+			width: 29%;
+			float: right;
+		}
+
+		.childhood-song0 {
+			line-height: 1.65;
+			font-size: 25px;
+			text-align: justify;
+			font-family: 'Fira Code',monospace;
+			font-weight: 450;
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		.gift-card{
+			width: 80%;
+			margin: 0% 200px 0 400px;
+		}
+
+		.gift-img {
+			margin: 0%;
+			float: left;
+			position: relative;
+		}
+
+		.gift-img::before {
+			content: '';
+			position: absolute;
+			border: 15px solid rgba(58, 83, 223, 0.5);
+			top: 25px;
+			right: -25px;
+			height: 82%;
+			width: 90%;
+			}
+
+		.content-container {
+			padding-top: 15px;
+			padding-left: 450px;
+			text-align: justify;
+			margin-bottom: 250px;
+			padding-right: 500px;
+		}
+
+		.content-styling {
+			font-size: 22px;
+			letter-spacing: 1.5px;
+			line-height: 1.35;
+			font-family: 'Fira Code', monospace;
+		}
+
+
+		#btn-stylling {
+			text-decoration: none;
+			color: #f1f1f1;
+			font-size: 16px;
+			padding: 10px 15px;
+			background-color: blue;
+			box-shadow: 3px 4px rgb(238, 76, 111);
+		}
+
+		#btn-stylling:hover {
+			box-shadow: none;
+			/**padding: 15px 20px;**/
+			font-size: 19px;
+			background-color: crimson;
+			transform: scale(1.25);
+			transition: all 0.3s ease-in-out;
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		.background-color {
+			background: black;
+			color: white;
+		}
+
+	</style>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap" rel="stylesheet">
+	</head>
+<body>
+	<header>
+		<div class="container flex-container">
+			<div class="">
+
+				
+			</div>
+			<nav>
+				<ul>
+					<li><a  href="#">Home</a></li>
+					<li><a href="#">Contact</a></li>
+					<img  src="https://i.pinimg.com/564x/2e/5b/50/2e5b50f51f2dca3f37730ce507f20d9a.jpg" alt="my_logo" width="130px" height="110px" class="logo">
+					<li><a href="#">Help</a></li>
+					<li><a href="#">Blogs</a></li>
+				</ul>
+			</nav>
+
+		</div>
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</header>
+	<main>
+
+		<div class="logo-design">
+			<div class="flex-item flipH">
+				Deepify
+			</div>
+		</div>
+
+
+
+
+
+		
+
+
+
+
+
+		<br><br><br><br><br>
+
+		<div class="circle-container-outter">
+			<div class="circle-container-inner">
+				<div class="quotes-container">
+					<i><p style="font-weight: 500; letter-spacing: 3px;">"Music is like a dream. One that I cannot hear."</p></i>
+					<p style="margin-bottom: 20px; font-size: 22px; font-weight: 200; letter-spacing: 1.5px; border-left: 2.65px groove beige; padding-left: 40px;">~ Ludwing van bathoven.</p>
+					<i><p style="font-weight: 500; letter-spacing: 3px;">"Music without life would be a mistake."</p></i>
+					<p style="font-size: 22px; font-weight: 200; letter-spacing: 1.5px; border-left: 2.65px groove beige; padding-left: 40px;">~ Friedrich Nietzsche.</p>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<br><br>
+		<br><br><br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<div class="semi-circle-outter">
+
+			<div class="semi-circle-inner">
+				<div class="ignite-song0">
+					<p>"Fireflies, a million little pieces</p>
+					<p> Feeds the dying light, and brings me back to life</p>
+					<p> In your eyes, I see something to believe in</p>
+					<p> Your hands are like a flame, yours palm 's the</p>
+					<p style="padding-bottom: 28px;"> sweetest pain</p>
+				</div>
+				<div class="ignite-song1">
+					<p> Let the darkness lead us into the light</p>
+					<p> Let our dreams get lost, feel the temprature rise</p>
+					<p> Baby, tell me one more beatiful lie</p>
+					<p> One touch and I ignite</p>
+					<p> Like a starship speeding into the night</p>
+					<p> You and I get lost in the infinite lights</p>
+					<p> Baby, tell me one more beatiful lie</p>
+					<p style="padding-bottom: 28px;"> One touch and I ignite</p>
+				</div>
+				<div class="ignite-song2">
+					<p> One touch and I ignite</p>
+					<p> One touch and I ignite"</p>
+				</div>
+				<br/>
+				<div class="ignite-song3">
+					<p style="letter-spacing: 3px;">~ Alan Walker.</p>
+				</div>
+			</div>	
+		</div>
+		<br><br>
+		<br><br><br><br>
+		<div class="mixed-design-outter">
+			<div class="mixed-design-inner0 childhood-song0">
+				<div style="padding-left: 75px;">
+					<div class="childhood-song1">
+						<p>"Never lie away</p>
+						<p> Never lie away</p>
+						<p> Never, never lie away</p>
+						<p style="padding-bottom: 20px;"> Never lie away</p>
+					</div>
+					<div class="childhood-song1">
+						<p> And I wanna хай-ай-ай-ай</p>
+						<p> And I wanna хай-ай-ай-ай</p>
+						<p> And I wanna хай-ай-ай-ай</p>
+						<p style="padding-bottom: 25px;">And I wanna хай-ай-ай-ай,</p>
+					</div>
+					<div>
+						<p> Помню наше место</p>
+						<p style="padding-bottom: 25px;"> Помню наше место</p>
+
+						<p> Never lie away</p>
+						<p> Never lie away</p>
+						<p> Never lie away</p>
+						<p> Never lie away</p>
+					</div>
+				</div>
+			</div>
+			<div class="mixed-design-inner1 childhood-song0">
+				<p>Never lie away</p>
+				<p>Never lie away</p>
+				<p>Never, never lie away</p>
+				<p style="padding-bottom: 25px;">Never lie away</p>
+				<p>And I wanna хай-ай-ай-ай</p>
+				<p>And I wanna хай-ай-ай-ай</p>
+				<p>And I wanna хай-ай-ай-ай</p>
+				<p style="padding-bottom: 25px;">And I wanna хай-ай-ай-ай,</p>
+				<p>Помню наше место</p>
+				<p style="padding-bottom: 25px;">Помню наше место</p>
+
+				<p>Never lie away</p>
+				<p>Never lie away</p>
+				<p>Never lie away</p>
+				<p>Never lie away"</p>
+			</div>
+			<div class="mixed-design-inner1 childhood-song">
+				<p style="padding-top: 650px; padding-left: 0px; font-size: 30px; color: #f1f1f1; letter-spacing: 4px; text-shadow: 1px 2px #f1f1f1bb;">~ Rauf & Faik.</p>
+			</div>
+		</div>
+		<br><br><br><br>
+		<br><br><br><br><br><br><br><br>
+		
+		
+
+		<!--Sub-footer-->
+
+		
+
+
+
+
+
+		
+		<div class="gift-card">
+			<div class="gift-img">
+				<img src="https://i.pinimg.com/564x/b6/c0/40/b6c0404d233e9916ed598df907f2f052.jpg" alt="gift card image" width="350px">
+			</div>
+			<div class="content-container content-styling">
+				<p>You have made our success possible. Thankyou!</p>
+				<p>Many thanks for taking our services for last 20 years.</p>
+				<p style="position: relative; padding-bottom: 25px;">We value that relationship.</p>
+				<div class="btn-container">
+					<div class="btn-padding">
+						<a id="btn-stylling" href="#" style="letter-spacing: 3px;">Read more.</a>
+					</div>
+				</div>
+			</div>
+			<!--<div class="btn-container">
+				<div class="btn-padding">
+					<div class="btn-stylling">
+						<a style="position: absolute;" href="#">Read more.</a>
+					</div>
+				</div>
+			</div>-->
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<footer>
+		<div class="footer-container-outter">
+			<div class="footer-container-inner">
+				<div class="footer-heading">
+					<h3 id="my-h3" style="padding-right: 50px;">
+						Deepify
+					</h3>
+				</div>
+				<div class="content-containet-para">
+					<p id="my-p">Best music website for the last 20 years.</p>
+					<p id="my-p">You have made our success possible. Thankyou!</p>
+					<p id="my-p">Many thanks for taking our services for last 20 years.</p>
+				</div>
+				<div class="social-icons">
+					<ul id="my-ul">
+						<li id="my-li"><a id="my-a" href="#" class="fa fa-facebook"></a></li>
+						<li id="my-li"><a id="my-a" href="#" class="fa fa-twitter"></a></li>
+						<li id="my-li"><a id="my-a" href="#" class="fa fa-instagram"></a></li>
+						<li id="my-li"><a id="my-a" href="#" class="fa fa-pinterest"></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			 <div id="my-footer-bottom">copyright &copy;2021  Deepify. designed by :<span id="creator-name">~ $A.D.S!</span>
+			</div>
+		</div>
+	</footer>
+
+</body>
+</html>
